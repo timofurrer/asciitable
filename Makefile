@@ -1,5 +1,17 @@
+# variables
+CC = gcc
+CFLAGS = -Wall
+BINDIR = $(DESTDIR)/usr/bin
+NAME = asciitable
+
 all:
-	@gcc -Wall -o asciitable src/asciitable.c
+	$(CC) $(CFLAGS) -o $(NAME) src/asciitable.c
 
 clean:
-	@rm -f asciitable
+	rm -f $(NAME)
+
+install:
+	install --mode=755 $(NAME) $(BINDIR)/
+
+uninstall:
+	rm -f $(BINDIR)/$(NAME)
