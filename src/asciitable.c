@@ -4,7 +4,7 @@
 #define START_NUMBER   32
 #define END_NUMBER    127
 
-#define COLUMNS         3
+#define COLUMNS         4
 
 int main(int argc, char **argv)
 {
